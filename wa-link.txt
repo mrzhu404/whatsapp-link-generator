@@ -1,0 +1,337 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+<title>WHATSAPP LINK</title>
+</head>
+<style type="text/css">
+    body{
+        background-color: black;
+        color: black;
+        font-size: 1px;
+    }
+    .kedua{
+        font-size: 23px;
+        font-family: Oxanium;
+        color: red;
+    }
+    input{
+        width: 550px;
+        height: 30px;
+        background-color: transparent;
+        border: red double;
+        color: red;
+        font-family: Oxanium;
+        font-size: 24px;
+    }
+    .hek{
+        width: 150px;
+        height: 30px;
+        background-color: transparent;
+        border: red double;
+        color: white;
+        font-family: Oxanium;
+        font-size: 19px;
+    }
+    .file{
+        width: 450px;
+        height: 40px;
+        background-color: transparent;
+        border: red double;
+        color: red;
+        font-family: Oxanium;
+        font-size: 24px;
+    }
+    .button{
+        width: 180px;
+        height: 35px;
+        background-color: transparent;
+        border-color: red;
+        font-size: 16px;
+    }
+    .blink_text { -webkit-animation-name: blinker; -webkit-animation-duration: 2s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -moz-animation-name: blinker; -moz-animation-duration: 2s; -moz-animation-timing-function: linear; -moz-animation-iteration-count: infinite; animation-name: blinker; animation-duration: 2s; animation-timing-function: linear; animation-iteration-count: infinite; color: red; } @-moz-keyframes blinker { 0% { opacity: 5.0; } 50% { opacity: 0.0; } 100% { opacity: 5.0; } } @-webkit-keyframes blinker { 0% { opacity: 5.0; } 50% { opacity: 0.0; } 100% { opacity: 5.0; } } @keyframes blinker { 0% { opacity: 5.0; } 50% { opacity: 0.0; } 100% { opacity: 5.0; } } 
+    .tombol{
+  background-color: black;
+  color:#00FF00;
+  margin: 3px;
+  border: 2px red double;
+  border-radius: 7px;
+  padding:10px 13px;
+  text-decoration:none;
+  font-family:Oxanium;
+  font-size:11pt;
+}
+.tomhome{
+  background-color: black;
+  color:#00FF00;
+  margin: 3px;
+  border: 2px red double;
+  border-radius: 7px;
+  padding:10px 29px;
+  text-decoration:none;
+  font-family:Oxanium;
+  font-size:11pt;
+}
+          .but{
+            color: white;
+            font-size: 17px;
+            font-family: Oxanium;
+          }
+          .atas{
+            background-color: black;
+            border-top: 3px solid red;
+          }
+          .home{
+            background-color: #696969;
+          }
+          li{
+     display: inline;
+    margin: 2px;
+    padding: 2px;
+    color: #00FF40; 
+          }
+          .thanks{
+    background-color: transparent;
+    color: yellow;
+    border-color: white;
+    font-family: courier new;
+}
+.link{
+  color: #00FF00;
+  font-family: Oxanium;
+  text-decoration: none;
+}
+.art-content .art-postcontent-0 .layout-item-0 { padding-right: 0px;padding-left: 0px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+textarea{
+    height: 65px;
+    width: 100%;
+    background-color: transparent;
+    border: red double;
+    color: white;
+}
+input{
+    background-color: transparent;
+    color: white;
+    border: #32CD32  double;
+    font-family: courier new;
+}
+.buttonu{
+    width: 150px;
+        height: 30px;
+        background-color: transparent;
+        border: red double;
+        color: white;
+        font-family: Oxanium;
+        font-size: 19px;
+    }
+.thanks{
+    background-color: transparent;
+    color: yellow;
+    border-color: white;
+    font-family: courier new;
+</style>
+<?php
+function getClientIP() {
+
+    if (isset($_SERVER)) {
+
+        if (isset($_SERVER["HTTP_X_FORWARDED_FOR"]))
+            return $_SERVER["HTTP_X_FORWARDED_FOR"];
+
+        if (isset($_SERVER["HTTP_CLIENT_IP"]))
+            return $_SERVER["HTTP_CLIENT_IP"];
+
+        return $_SERVER["REMOTE_ADDR"];
+    }
+
+    if (getenv('HTTP_X_FORWARDED_FOR'))
+        return getenv('HTTP_X_FORWARDED_FOR');
+
+    if (getenv('HTTP_CLIENT_IP'))
+        return getenv('HTTP_CLIENT_IP');
+
+    return getenv('REMOTE_ADDR');
+}
+
+echo "
+<center><div class=\"atas\"><font class=\"but\">Your IP&nbsp;</font><font color=\"white\" face=\"Oxanium\" size=\"3px\">: <font color=\"#00FF00\" face=\"Oxanium\" size=\"3px\" align=\"center\">".getClientIP()."
+</center></div>
+";
+?>
+<?php
+// Mendapatkan IP pengunjung menggunakan getenv()
+function get_client_ip() {
+    $ipaddress = '';
+    if (getenv('HTTP_CLIENT_IP'))
+        $ipaddress = getenv('HTTP_CLIENT_IP');
+    else if(getenv('HTTP_X_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+    else if(getenv('HTTP_X_FORWARDED'))
+        $ipaddress = getenv('HTTP_X_FORWARDED');
+    else if(getenv('HTTP_FORWARDED_FOR'))
+        $ipaddress = getenv('HTTP_FORWARDED_FOR');
+    else if(getenv('HTTP_FORWARDED'))
+       $ipaddress = getenv('HTTP_FORWARDED');
+    else if(getenv('REMOTE_ADDR'))
+        $ipaddress = getenv('REMOTE_ADDR');
+    else
+        $ipaddress = 'IP tidak dikenali';
+    return $ipaddress;
+}
+ 
+ 
+// Mendapatkan IP pengunjung menggunakan $_SERVER
+function get_client_ip_2() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'IP tidak dikenali';
+    return $ipaddress;
+}
+ 
+ 
+// Mendapatkan jenis web browser pengunjung
+function get_client_browser() {
+    $browser = '';
+    if(strpos($_SERVER['HTTP_USER_AGENT'], 'Netscape'))
+        $browser = 'Netscape';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox'))
+        $browser = 'Firefox';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome'))
+        $browser = 'Chrome';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Opera'))
+        $browser = 'Opera';
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE'))
+        $browser = 'Internet Explorer';
+    else
+        $browser = 'Other';
+    return $browser;
+}
+?>
+<?php
+echo "<center><div class=\"atas\"><br><font color=\"white\" face=\"Oxanium\" size=\"3px\">User-Agents : </font><font color=\"#00FF00\" face=\"Oxanium\" size=\"3px\"> ".$_SERVER['HTTP_USER_AGENT'];
+?>
+<html>
+<body>
+  <center><br>
+  <hr color="#B22222"></div><br>
+  <div class="home"><a href="index.php" class='tomhome'>HOME</a></div>
+<body>
+    <br><br>
+<hr style="margin-top: 1px; margin-bottom: 1px;"><h4 class="blink_text" style="margin-top: 1px;margin-bottom: 0px; font-size:63px;color:#7CFC00 ; outline-color: 4px white; font-family:Oxanium;">WHATSAPP LINK</h4><hr style="margin-top: 1px; margin-bottom: 1px;"><br>
+<center>
+<center>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                
+              </div><br>
+            <label>[ Nomor Target (62) ]</label>
+              <div class="form-group">
+                <table class="table">
+                  <tr>
+                    <td>
+                        <br>
+                        <input type="number" id="nick" style="width:500px; height: 30px" class="form-control" placeholder="ex : 6281xxxxxxxx">
+                    </td>
+                  </tr>
+                </table>
+              </div><br>
+              <label>[ Masukan Isi Pesan ]<label>
+              <div class="form-group">
+                <table class="table">
+                  <tr>
+                    <td>
+                        <br>
+                        <input type="text" id="kata2" style="width:500px; height: 30px" class="form-control" placeholder="Hello MrZhu404 Apa Kabar">
+                    </td>
+                 </tr>
+                </table>
+              </div>
+   </center>           
+              <br>
+              <div class="form-group">
+                <button class="hek" onclick="buat_euy()"> BUAT LINK</button>
+              </div>
+            </div>
+<br>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>[ HASIL ]</label>
+                
+              </div>
+<br>
+              <div class="form-group">
+                <label>Perhatian : Nanti Hasilnya Akan Muncul Disini</label><br></div>
+                <br>
+                <div><form name="copy"><div align="center"><span><button class="hek" style="margin-bottom: 16px; font-family: Sirin Stencil;" type="button" onclick="copy_text()">SALIN LINK</button> </span></div><p align="center"><textarea class="form-control" name="txt" id="hasil" style="width:500px; height: 60px font-size: 27px; font-family: Oxanium;"></textarea></p></form>
+
+              </div>
+              <script type="text/javascript">
+    function copy_text() {
+        document.getElementById("hasil").select();
+        document.execCommand("copy");
+        alert("Link Berhasil Di Salin !");
+    }
+</script>
+                
+              </div>
+            </div>
+        </div>
+    </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script>
+  function buat_euy() {
+    var gambar = $('#gambar').val();
+    var icon = $('#icon').val();
+    var background = $('#background').val();
+
+    var nick = $('#nick').val();
+    var warna_nick = $('#warna_nick').val();
+    var font_nick = $('#font_nick').val();
+
+    var tim = $('#tim').val();
+    var warna_tim = $('#warna_tim').val();
+    var font_tim = $('#font_tim').val();
+
+    var kata1 = $('#kata1').val();
+    var warna_kata1 = $('#warna_kata1').val();
+    var font_kata1 = $('#font_kata1').val();
+
+    var kata2 = $('#kata2').val();
+    var warna_kata2 = $('#warna_kata2').val();
+    var font_kata2 = $('#font_kata2').val();
+
+    var kata3 = $('#kata3').val();
+    var warna_kata3 = $('#warna_kata3').val();
+    var font_kata3 = $('#font_kata3').val();
+
+    var thanks = $('#thanks').val();
+    var warna_thanks = $('#warna_thanks').val();
+
+    var output = 'https://api.whatsapp.com/send?phone='+nick+'&text='+kata2+''; 
+    $('#hasil').val(output);
+  }
+</script>
+<br>
+</body>
+</html>
